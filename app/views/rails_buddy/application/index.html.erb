@@ -1,0 +1,9 @@
+<h1>Generate migration</h1>
+
+<%= form_tag migrations_path, method: :post do %>
+  <label>Table name</label>
+  <input type="text" name="table_name">
+
+  <input type="submit">
+<% end %>
+
