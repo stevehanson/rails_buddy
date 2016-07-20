@@ -1,14 +1,12 @@
 # RailsBuddy
-Short description and motivation.
 
-## Usage
-How to use my plugin.
+RailsBuddy is a Rails engine that adds a web UI that can be used for running common Rails development tasks, like creating migrations and viewing routes. It's still a work-in-progress at this point.
 
 ## Installation
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rails_buddy'
+gem 'rails_buddy', group: :development
 ```
 
 And then execute:
@@ -16,10 +14,13 @@ And then execute:
 $ bundle
 ```
 
-Or install it yourself as:
-```bash
-$ gem install rails_buddy
+Then, just mount RailsBuddy in your `config/routes.rb` file:
+
+```ruby
+mount RailsBuddy::Engine => "/buddy"
 ```
+
+Now, navigate to `http://localhost:3000/buddy`, and meet your new friend.
 
 ## Contributing
 Contribution directions go here.
